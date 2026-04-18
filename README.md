@@ -3,15 +3,19 @@ Docker compose for running redis and rediscommander/redis-commander
 
 ## alternate method create network
 
-```
+```bash
 docker network create redis-net
+```
 
+```bash
 docker run -d \
   --name redis \
   --network redis-net \
   -p 6379:6379 \
   redis:7
+```
 
+```bash
 docker run -d \
   --name redis-commander \
   --network redis-net \
